@@ -1,22 +1,23 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PageTitle from "./components/PageTitle.vue";
+import PageQuery from "./components/PageQuery.vue";
+import PageMain from "./components/PageMain.vue";
 
 export default {
   components: {
-    HelloWorld
-  }
-}
+    PageTitle,
+    PageQuery,
+    PageMain,
+  },
+};
 </script>
 
 <template>
-  <div class="container">
-    <HelloWorld />
-  </div>
-  <div class="container-small">
-    <HelloWorld />
-  </div>
+  <PageTitle />
+  <PageQuery />
+  <PageMain />
 </template>
 
 <style lang="scss">
-@import './style/global.scss';
+@import "./style/global.scss";
 </style>
