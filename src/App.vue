@@ -13,9 +13,15 @@ export default {
 </script>
 
 <template>
-  <PageTitle />
-  <PageQuery />
-  <PageMain />
+  <header>
+    <PageTitle />
+  </header>
+  <main>
+    <div class="container">
+      <PageQuery />
+      <PageMain />
+    </div>
+  </main>
 </template>
 
 <style lang="scss">
