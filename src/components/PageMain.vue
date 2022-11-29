@@ -29,6 +29,11 @@ export default {
         });
     },
   },
+  computed: {
+    queryLength() {
+      return this.store.characters.length;
+    },
+  },
   created() {
     this.changeQuery();
   },
@@ -39,7 +44,7 @@ export default {
   <PageQuery @search="changeQuery" />
   <div class="card-container">
     <div class="found">
-      <h3>Trovati {{ store.characters.length }} sbabbari</h3>
+      <h3>Trovati {{ queryLength }} sbabbari</h3>
     </div>
     <CardBox />
   </div>
