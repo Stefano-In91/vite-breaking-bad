@@ -1,15 +1,18 @@
 <script>
 export default {
   name: "SingleCard",
+  props: {
+    info: Object,
+  },
 };
 </script>
 
 <template>
   <div class="card">
-    <img src="https://www.mrw.it/img/cope/0iwkf4_1609360688.jpg" alt="" />
-    <h3>Nome Bomber</h3>
-    <p>Visto Dove</p>
-    <p>Vivo o morto</p>
+    <img :src="info.img" :alt="info.name" />
+    <h2>{{ info.nickname }}</h2>
+    <h3>{{ info.name }}</h3>
+    <p>{{ info.status }}</p>
   </div>
 </template>
 
@@ -24,6 +27,10 @@ export default {
   & * {
     width: 100%;
     margin-bottom: 0.5rem;
+  }
+  img {
+    height: 300px;
+    object-fit: cover;
   }
   p {
     color: darkgray;

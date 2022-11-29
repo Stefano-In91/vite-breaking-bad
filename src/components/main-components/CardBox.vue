@@ -1,23 +1,23 @@
 <script>
+import { store } from "../../store.js";
 import SingleCard from "./SingleCard.vue";
+
 export default {
   name: "CardBox",
   components: {
     SingleCard,
+  },
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
 
 <template>
   <div class="card-box">
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
-    <SingleCard />
+    <SingleCard v-for="character in store.characters" :info="character" />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script>
 import PageTitle from "./components/PageTitle.vue";
-import PageQuery from "./components/PageQuery.vue";
+import PageQuery from "./components/main-components/PageQuery.vue";
 import PageMain from "./components/PageMain.vue";
 
 export default {
@@ -18,7 +18,6 @@ export default {
   </header>
   <main>
     <div class="container">
-      <PageQuery />
       <PageMain />
     </div>
   </main>
